@@ -9,11 +9,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  public galleryMenu = [
-    {title : 'Book', url : '/book',   icon : 'book'},    
-    {title : 'Audio', url : '/audio', icon : 'musical-notes'},      	
-    {title : 'Video', url : '/video', icon : 'videocam'}   
-  ]
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
