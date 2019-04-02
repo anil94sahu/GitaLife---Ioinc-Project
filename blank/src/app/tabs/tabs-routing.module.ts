@@ -21,7 +21,14 @@ const routes: Routes = [
         children : [
           {
             path: '',
-            loadChildren : '../gallery/gallery.module#GalleryPageModule'
+            loadChildren : '../gallery/gallery.module#GalleryPageModule',
+            children: [
+              {
+                path: 'book',
+                loadChildren : '../gallery/book/book.module#BookPageModule'
+              }
+              
+            ]
           }
         ]
       },
@@ -40,6 +47,15 @@ const routes: Routes = [
           {
             path: '',
             loadChildren : '../about/about.module#AboutPageModule'
+          }
+        ]
+      },
+      {
+        path: 'gallery/book',
+        children : [
+          {
+            path: '',
+            loadChildren : '../gallery/book/book.module#BookPageModule'
           }
         ]
       },

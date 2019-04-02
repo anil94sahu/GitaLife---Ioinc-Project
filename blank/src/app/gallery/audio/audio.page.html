@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot= "start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>Audio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item *ngFor="let item of kirtan"> 
+        <ion-thumbnail slot="start">
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-thumbnail>
+        <ion-label>{{item.name}}</ion-label>
+        <ion-label>{{item.artist}}</ion-label>
+
+    </ion-item>
+</ion-content>
