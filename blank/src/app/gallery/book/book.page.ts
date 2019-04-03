@@ -13,6 +13,7 @@ export class BookPage implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.data = ['a','b','c','d','e','f','r','t','y','u','i','o','p','q','w','e','r','t','y','u'];
   }
 
   loadData(event) {

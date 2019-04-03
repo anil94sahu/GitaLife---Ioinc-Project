@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'book', loadChildren: './gallery/book/book.module#BookPageModule' },
   { path: 'audio', loadChildren: './gallery/audio/audio.module#AudioPageModule' },
   { path: 'video', loadChildren: './gallery/video/video.module#VideoPageModule' }
+  
 ]
 @NgModule({
   imports: [
