@@ -1,12 +1,30 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Home
+        <ion-item  [routerDirection]="'root'" [routerLink]="'/home'">
+          <ion-icon slot="start" name="contact"></ion-icon>
+          <ion-label slot="middle"> Home</ion-label>
+        </ion-item>
+     
     </ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card *ngFor="let item of home">
+      <ion-toggle color="success" checked ="{{item.check}}" (click)="removePost(item)"></ion-toggle>
+      <ion-img src="{{item.image}}"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>{{item.subtitle}}</ion-card-subtitle>
+        <ion-card-title>{{item.title}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{item.description}}
+      </ion-card-content>
+  </ion-card>
+  
   <ion-card>
     <ion-img src="../../assets/image/krishna.jpg"></ion-img>
     <ion-card-header>

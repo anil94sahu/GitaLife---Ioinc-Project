@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+        <ion-icon name="arrow-back" [routerLink]="'/'"></ion-icon>
+        <ion-icon slot="end" name="contact"></ion-icon>
+        <ion-title >Home</ion-title>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <form [formGroup]="homeForm">
+          <ion-list lines="full">
+              <ion-item><ion-input  placeholder="Title" formControlName="title" type="text"></ion-input> </ion-item>
+              <ion-item><ion-input  placeholder="Subtitle" formControlName="subtitle" type="text"></ion-input></ion-item>
+              <ion-item><ion-input  placeholder="Description" formControlName="description" type="text"></ion-input></ion-item>
+              <ion-item><ion-input  placeholder="image" formControlName="image" type="text"></ion-input></ion-item>
+          </ion-list>
+          <ion-button expand="default" shape="round" slot="start" color="primary"  (click)="saveRecord(homeForm.value)">publish content</ion-button>
+          <ion-button expand="default" shape="round" slot="end" color="dark" (click)="reset()" >Reset</ion-button>
+    </form>
+</ion-content>
